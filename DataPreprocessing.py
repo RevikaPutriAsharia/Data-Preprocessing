@@ -87,9 +87,9 @@ print(df.head())
 #5. Penyimpanan Data
 df.to_csv('C:/Users/UseRj_/Documents/movie_dataset_cleaned.csv', index=False)
 
-#-----MELAKUKAN VERIFIKASI-----#
+#MELAKUKAN VERIFIKASI
 print("                     ")
-print("MELAKUKAN VERIFIKASI TERHADAP DATA YANG SUDAH DI CLEANING")
+print("Melakukan Verfikasi Terhadap Data Yang Sudah dI Cleaning")
 print("                     ")
 
 # 1. Verifikasi Tidak Ada Missing Values
