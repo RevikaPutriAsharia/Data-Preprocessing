@@ -21,11 +21,9 @@ import numpy as np
 df['director_name'] = df['director_name'].replace(['Nan', 'Null'], '', regex=True)
 
 #Memeriksa jumlah missing values di setiap kolom
-print("Menampilkan Jumlah Missing Values di Setiap Kolom")
 print(df.isnull().sum())
 
-#3. Membersihkan Data
-#Hapus baris yang memiliki nilai Nan di kolom penting 
+
 #a. Menghapus baris dengan missing values pada kolom "gross"
 df_cleaned1 = df.dropna(subset=["gross"], axis=0, inplace=True)
 # Reset index setelah menghapus baris
@@ -33,7 +31,7 @@ df.reset_index(drop=True, inplace=True)
 
 #b. Menghapus baris dengan missing values pada kolom "budget"
 df_cleaned2 = df.dropna(subset=["budget"], axis=0, inplace=True)
-#Reset index setelah menghapus baris
+# Reset index setelah menghapus baris
 df.reset_index(drop=True, inplace=True)
 
 #c. Atasi nilai yang tidak konsisten atau kesalahan penulisan di kolom seperti perbedaan antara "Color" dan "color" serta "shane black" dan "SHANE BLACK"
